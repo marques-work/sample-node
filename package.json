@@ -1,0 +1,22 @@
+{
+  "name": "sample-node",
+  "version": "1.0.0",
+  "description": "a sample repo to test snap's nodejs build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marques-work/sample-node.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marques-work/sample-node/issues"
+  },
+  "homepage": "https://github.com/marques-work/sample-node#readme",
+  "dependencies": {
+    "sha1": "^1.1.1"
+  }
+}
