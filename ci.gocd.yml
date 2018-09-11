@@ -1,22 +1,23 @@
 ---
 format_version: 3
 pipelines:
-  node-build:
+  "node-build":
     group: as-code
     materials:
-      git: https://github.com/marques-work/sample-node.git
+      gh:
+        git: https://github.com/marques-work/sample-node.git
     environment_variables:
       FOO: bar
     stages:
       - first:
-          tasks:
-            - exec:
-                command: which
-                arguments:
-                  - date
+        tasks:
+          - exec:
+            command: which
+            arguments:
+              - date
       - second:
-          tasks:
-            - exec:
-                command: echo
-                arguments:
-                  - FOO is $FOO
+        tasks:
+          - exec:
+            command: echo
+            arguments:
+              - FOO is $FOO
