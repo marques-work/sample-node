@@ -1,0 +1,23 @@
+---
+format_version: 3
+pipelines:
+  node-build:
+    group: as-code
+    materials:
+      gh:
+        type: git
+        url: https://github.com/marques-work/sample-node.git
+    environment_variables:
+    stages:
+      first:
+        tasks:
+          - exec:
+            command: which
+            arguments:
+              - date
+      second:
+        tasks:
+          - exec:
+            command: echo
+            arguments:
+              - version is $BASH_VERSION
