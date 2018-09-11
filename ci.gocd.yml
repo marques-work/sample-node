@@ -10,14 +10,14 @@ pipelines:
       FOO: bar
     stages:
       - first:
-        tasks:
-          - exec:
-            command: which
-            arguments:
-              - date
+          tasks:
+            - exec:
+                command: which
+                arguments:
+                  - date
       - second:
-        tasks:
-          - exec:
-            command: echo
-            arguments:
-              - FOO is $FOO
+          tasks:
+            - exec:
+                command: echo
+                arguments:
+                  - FOO is $FOO
