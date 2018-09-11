@@ -9,13 +9,13 @@ pipelines:
         url: https://github.com/marques-work/sample-node.git
     environment_variables:
     stages:
-      first:
+      - first:
         tasks:
           - exec:
             command: which
             arguments:
               - date
-      second:
+      - second:
         tasks:
           - exec:
             command: echo
