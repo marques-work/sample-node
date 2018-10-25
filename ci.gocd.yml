@@ -8,6 +8,7 @@ pipelines:
         git: https://github.com/marques-work/sample-node.git
     environment_variables:
       FOO: bar
+      BAZ: quu
     stages:
       - first:
           tasks:
