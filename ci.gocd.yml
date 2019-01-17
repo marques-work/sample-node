@@ -1,24 +1,13 @@
----
 format_version: 3
 pipelines:
-  "node-build":
-    group: as-code
+  config42:
+    group: first
+    template: the42
+    label_template: ${COUNT}
+    lock_behavior: none
     materials:
-      gh:
-        git: https://github.com/marques-work/sample-node.git
-    environment_variables:
-      FOO: bar
-      BAZ: quu
-    stages:
-      - first:
-          tasks:
-            - exec:
-                command: which
-                arguments:
-                  - date
-      - second:
-          tasks:
-            - exec:
-                command: echo
-                arguments:
-                  - FOO is $FOO
+      git:
+        git: https://github.com/marques-work/sample-node
+        shallow_clone: false
+        auto_update: true
+        branch: template-test
