@@ -42,3 +42,36 @@ pipelines:
                 arguments:
                   - oh
                   - snap
+  lolz:
+    group: ass-code
+    materials:
+      gh:
+        git: https://github.com/marques-work/sample-node.git
+    stages:
+      - one:
+          tasks:
+            - exec:
+                command: id
+      - two:
+          tasks:
+            - exec:
+                command: w
+      - three:
+          tasks:
+            - exec:
+                command: echo
+                arguments:
+                  - sine yo pitty on the runny kine
+
+  roflmao:
+    group: ass-code
+    materials:
+      gh:
+        git: https://github.com/marques-work/sample-node.git
+    stages:
+      - first:
+          tasks:
+            - exec:
+                command: echo
+                arguments:
+                  - sepatown
