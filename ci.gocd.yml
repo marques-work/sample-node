@@ -22,3 +22,23 @@ pipelines:
                 command: echo
                 arguments:
                   - FOO is $FOO
+
+  balderdash:
+    group: as-code
+    materials:
+      gh:
+        git: https://github.com/marques-work/sample-node.git
+    stages:
+      - first:
+          tasks:
+            - exec:
+                command: echo
+                arguments:
+                  - poppycock
+      - second:
+          tasks:
+            - exec:
+                command: say
+                arguments:
+                  - oh
+                  - snap
