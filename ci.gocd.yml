@@ -1,5 +1,14 @@
 ---
-format_version: 3
+format_version: 5
+environments:
+  uno:
+    pipelines:
+      - node-build
+      - lolz
+  dos:
+    pipelines:
+      - balderdash
+      - roflmao
 pipelines:
   "node-build":
     group: as-code
