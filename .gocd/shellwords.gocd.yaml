@@ -1,0 +1,30 @@
+format_version: 3
+pipelines:
+  shellwords:
+    group: first
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git:
+        git: https://github.com/marques-work/shellwords-ts
+        shallow_clone: false
+        auto_update: true
+        branch: master
+    stages:
+    - doit:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          now:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '-1'
+                command: ls
+                run_if: passed
