@@ -25,6 +25,11 @@ pipelines:
                 command: which
                 arguments:
                   - date
+            - exec:
+                command: ls
+                arguments:
+                  - -l
+                  - -A
       - second:
           tasks:
             - exec:
